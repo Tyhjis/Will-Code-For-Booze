@@ -11,9 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140331132536) do
+ActiveRecord::Schema.define(version: 20140331144559) do
 
-  create_table "inproceedings", force: true do |t|
+  create_table "references", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "author"
@@ -30,6 +30,19 @@ ActiveRecord::Schema.define(version: 20140331132536) do
     t.string   "organization"
     t.string   "publisher"
     t.string   "note"
+    t.string   "annote"
+    t.string   "chapter"
+    t.string   "crossref"
+    t.string   "edition"
+    t.string   "eprint"
+    t.string   "howpublished"
+    t.string   "institution"
+    t.string   "journal"
+    t.string   "key"
+    t.integer  "number"
+    t.string   "school"
+    t.string   "referencetype"
+    t.string   "url"
   end
 
 end
