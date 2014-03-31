@@ -1,4 +1,19 @@
 <p id="notice"><%= notice %></p>
 
+<br>
+
+<ul>
+  <li>Author: <%= @inproceeding.author %></li>
+  <li>Title: <%= @inproceeding.title %></li>
+  <li>Booktitle: <%= @inproceeding.booktitle %></li>
+  <li>Editor: <%= @inproceeding.editor %></li>
+  <li>Year: <%= @inproceeding.year %></li>
+  <li>Pages: <%= @inproceeding.pagestart %> - <%= @inproceeding.pageend %> </li>
+  <li>Publisher: <%= @inproceeding.publisher %></li>
+  <li>Month: <%= @inproceeding.month %></li>
+  <li>Address: <%= @inproceeding.address %></li>
+  <li>Note: <%= @inproceeding.note %></li>
+</ul>
+
 <%= link_to 'Edit', edit_inproceeding_path(@inproceeding) %> |
 <%= link_to 'Back', inproceedings_path %>
