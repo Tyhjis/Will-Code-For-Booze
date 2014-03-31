@@ -1,0 +1,6 @@
+/.bundle
+/tmp
+/spec/tmp
+/vendor/bundle
+/log
+/db
