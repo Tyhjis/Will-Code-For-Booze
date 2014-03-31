@@ -17,7 +17,7 @@ class CreateInproceedings < ActiveRecord::Migration
       t.string :organization
       t.string :publisher
       t.string :note
-      
+
     end
   end
 end
