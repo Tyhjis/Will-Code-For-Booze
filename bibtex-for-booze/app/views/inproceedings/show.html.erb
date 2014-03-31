@@ -2,6 +2,8 @@
 
 <br>
 
+<h1>Inproceeding: <%= @inproceeding.title %></h1>
+
 <ul>
   <li>Author: <%= @inproceeding.author %></li>
   <li>Title: <%= @inproceeding.title %></li>
@@ -14,6 +16,14 @@
   <li>Address: <%= @inproceeding.address %></li>
   <li>Note: <%= @inproceeding.note %></li>
 </ul>
+
+<h2>As bibtex: </h2>
+
+<p>To use this as a reference paste the following into a file named <i>file_name<b>.bib</b></i>.</p>
+
+<br>
+
+
 
 <%= link_to 'Edit', edit_inproceeding_path(@inproceeding) %> |
 <%= link_to 'Back', inproceedings_path %>
