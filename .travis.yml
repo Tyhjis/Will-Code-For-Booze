@@ -7,16 +7,15 @@ script:
 - bundle exec rake db:test:prepare
 - bundle exec rspec -fd spec/
 before_script:
-- "export DISPLAY=:99.0"
-- "sh -e /etc/init.d/xvfb start"
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
 - sleep 3
 - bundle exec rails s -d
 - sleep 3
 deploy:
   provider: heroku
   api_key:
-    secure: Y0hvG9tf/N+9KZSPRXlXXNEmG6SsX2SNjCOlWUqbZYoP1aVDg/c5Xq/0hDLsbSBGomTXtlDL0Tt5ouu5dp1dgY7eUnLP5kggaBiyt8rYXRIq4sjE6MrG6C/TQg9+gXZqDpr5gM2ZU+vXQqqObxDiQn0oH8jsJbPe5+85NGpZ6gQ=
-  app: will-code-for-booze
+    secure: JVoDLYn+gJhoQmM0xkvUcDNogmiZdxhoyGYNFE78NtCt+fMPKeVZijs3enYsZk/NTCVdZUuGGi2Zpsu0duZYM8ZJQbtLk056Wv4lm9QnCdNPnSffFuNQk0Q9ZL6+xAaXfEwma+SbMLneYP2bvAeExrM7d13p0a/wYs3FdXMKBEw=
+  app: Will-Code-For-Booze
   on:
     repo: Tyhjis/Will-Code-For-Booze
-  run: "rake db:migrate"
