@@ -18,5 +18,5 @@ deploy:
     secure: Y0hvG9tf/N+9KZSPRXlXXNEmG6SsX2SNjCOlWUqbZYoP1aVDg/c5Xq/0hDLsbSBGomTXtlDL0Tt5ouu5dp1dgY7eUnLP5kggaBiyt8rYXRIq4sjE6MrG6C/TQg9+gXZqDpr5gM2ZU+vXQqqObxDiQn0oH8jsJbPe5+85NGpZ6gQ=
   app: will-code-for-booze
   on:
-    repo: Tyhjis / Will-Code-For-Booze
+    repo: Tyhjis/Will-Code-For-Booze
   run: "rake db:migrate"
