@@ -19,3 +19,5 @@ deploy:
   app: bibtex-for-booze
   on:
     repo: Tyhjis/Will-Code-For-Booze
+afer_success:
+- heroku run db:migrate --app bibtex-for-booze
