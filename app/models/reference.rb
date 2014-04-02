@@ -1,5 +1,7 @@
 class Reference < ActiveRecord::Base
     include ScandGenerator
+
+    validates :year, numericality: true
     
     def to_inproceedings_bib_str
         #required fields: AUTHOR, TITLE, BOOKTITLE, YEAR
