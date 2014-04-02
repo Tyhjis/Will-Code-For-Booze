@@ -1,4 +1,5 @@
 class Reference < ActiveRecord::Base
+
     include ScandGenerator
 
     validates :year, numericality: true
@@ -6,40 +7,38 @@ class Reference < ActiveRecord::Base
     def to_inproceedings_bib_str
         #required fields: AUTHOR, TITLE, BOOKTITLE, YEAR
         #optional fields: EDITOR, VOLUME/NUMBER, SERIES, PAGES, ADDRESS, MONTH, ORGANIZATION, PUBLISHER, NOTE, KEY
-        retstr = "@INPROCEEDINGS{ author = " + "\"" + author + "\"" + ", title = " + "\"" + title + "\"" + ", booktitle = " + "\"" + booktitle + "\"" + ", year = " + "\"" + year + "\""
-        if not editor
+        #retstr = "@INPROCEEDINGS{ author = " + "\"" + author + "\"" + ", title = " + "\"" + title + "\"" + ", booktitle = " + "\"" + booktitle + "\"" + ", year = " + "\"" + #{year} + "\""
+        retstr = "@INPROCEEDINGS{ author = " + "\"" + author + "\"" + ", title = " + "\"" + title + "\"" + ", booktitle = " + "\"" + booktitle + "\"" + ", year = " + "\"" + year.to_s + "\""
+        unless editor.empty?
             retstr = retstr + ", editor = " + "\"" + editor + "\""
         end
-        if not volume
+        if volume
             retstr = retstr + ", volume = " + "\"" + volume + "\""
         end
-        if not number
+        if number
             retstr = retstr + ", number = " + "\"" + number + "\""
         end
-        if not series
+        unless series.empty?
             retstr = retstr + ", series = " + "\"" + series + "\""
         end
-        if not pages
-            retstr = retstr + ", pages = " + "\"" + pages + "\""
+        if pagestart and pageend
+            retstr = retstr + ", pages = " + "\"" + pagestart + "--" + pageend + "\""
         end
-        if not address
+        unless address.empty?
             retstr = retstr + ", address = " + "\"" + address + "\""
         end
-        if not month
+        if month
             retstr = retstr + ", month = " + "\"" + month + "\""
         end
-        if not organization
-            retstr = retstr + ", organization = " + "\"" organization + "\""
+        unless organization.empty?
+            retstr = retstr + ", organization = " + "\"" + organization + "\""
         end
-        if not publisher
+        unless publisher.empty?
             retstr = retstr + ", publisher = " + "\"" + publisher + "\""
         end
-        if not note
+        unless note.empty?
             retstr = retstr + ", note = " + "\"" + note + "\""
         end
-        if not key
-            retstr = retstr + ", key = " + "\"" + key + "\""
-        end
-        return retstr + "}"
+        retstr + "}"
     end
 end

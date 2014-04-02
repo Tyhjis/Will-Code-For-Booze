@@ -12,6 +12,10 @@ class ReferencesController < ApplicationController
     @reference = Reference.new
   end
 
+  def edit
+    set_reference
+  end
+
   def set_reference
     @reference = Reference.find(params[:id])
   end
