@@ -16,4 +16,17 @@ class ReferencesController < ApplicationController
     @reference = Reference.find(params[:id])
   end
 
+  def create
+    @reference = Reference.new params.require(:reference).permit(:author, :title, :booktitle, :year,:editor,
+                               :volume, :series, :pagestart, :pageend, :address, :month, :organization, :publisher, :note)
+
+    if @reference.save
+      redirect_to references_path
+
+    else
+        render :new
+    end
+  end
+
+
 end
