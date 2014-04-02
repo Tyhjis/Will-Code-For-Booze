@@ -16,6 +16,6 @@ deploy:
   provider: heroku
   api_key:
     secure: JVoDLYn+gJhoQmM0xkvUcDNogmiZdxhoyGYNFE78NtCt+fMPKeVZijs3enYsZk/NTCVdZUuGGi2Zpsu0duZYM8ZJQbtLk056Wv4lm9QnCdNPnSffFuNQk0Q9ZL6+xAaXfEwma+SbMLneYP2bvAeExrM7d13p0a/wYs3FdXMKBEw=
-  app: Will-Code-For-Booze
+  app: bibtex-for-booze
   on:
     repo: Tyhjis/Will-Code-For-Booze
