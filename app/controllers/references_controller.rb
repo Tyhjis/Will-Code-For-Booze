@@ -20,12 +20,14 @@ class ReferencesController < ApplicationController
     @reference = Reference.new params.require(:reference).permit(:author, :title, :booktitle, :year,:editor,
                                :volume, :series, :pagestart, :pageend, :address, :month, :organization, :publisher, :note)
 
-    if @reference.save
+    if not @reference.author.to_s.empty? and not @reference.title.to_s.empty? and not @reference.year.to_s.empty? and  not @reference.booktitle.to_s.empty? and  @reference.save
       redirect_to references_path
 
     else
-        render :new
+      @reference = Reference.new
+      render :new
     end
+
   end
 
 
