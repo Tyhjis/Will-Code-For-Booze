@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<br>
+
+<h1>reference: <%= @reference.title %></h1>
+
+<ul>
+  <li>Author: <%= @reference.author %></li>
+  <li>Title: <%= @reference.title %></li>
+  <li>Booktitle: <%= @reference.booktitle %></li>
+  <li>Editor: <%= @reference.editor %></li>
+  <li>Year: <%= @reference.year %></li>
+  <li>Pages: <%= @reference.pagestart %> - <%= @reference.pageend %> </li>
+  <li>Publisher: <%= @reference.publisher %></li>
+  <li>Month: <%= @reference.month %></li>
+  <li>Address: <%= @reference.address %></li>
+  <li>Note: <%= @reference.note %></li>
+</ul>
+
+<h2>As bibtex: </h2>
+
+<p>To use this as a reference paste the following into a file named <i>file_name<b>.bib</b></i>.</p>
+
+<br>
+
+<code>
+  jotain
+</code>
+
+<br>
+<br>
+
+<%= link_to 'Edit', edit_reference_path(@reference) %> |
+<%= link_to 'Back', references_path %>

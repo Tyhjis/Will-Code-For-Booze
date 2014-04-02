@@ -1,0 +1,32 @@
+<h1>New reference</h1>
+
+<h2>Create new reference</h2>
+
+<%= form_for(@reference) do |f| %>
+
+    Author: <%= f.text_field :author%>
+    Title: <%= f.text_field :title %>
+    Booktitle: <%= f.text_field :booktitle %>
+    <br>
+    Year: <%= f.number_field :year %>
+    Editor: <%= f.text_field :editor %>
+    Volume: <%= f.text_field :volume %>
+    <br>
+    Series: <%= f.text_field :series %>
+    Starting page: <%= f.text_field :pagestart %>
+    End page: <%= f.text_field :pageend %>
+    <br>
+    Address: <%= f.text_field :address %>
+    Month: <%= f.text_field :month %>
+    Organization: <%= f.text_field :organization %>
+    <br>
+    Publisher: <%= f.text_field :publisher %>
+    Note: <%= f.text_field :note %>
+    <br>
+    <%= f.submit %>
+<% end %>
+<%= link_to 'Back', references_path %>
+
+
+Required fields: author, title, booktitle, year
+Optional fields: editor, volume/number, series, pages, address, month, organization, publisher, note, key
