@@ -1,3 +1,3 @@
-Will Code For Booze -ryhmän Github-repositorio.
+Will Code For Booze -ryhmï¿½n Github-repositorio.
 
-https://travis-ci.org/Tyhjis/Will-Code-For-Booze.svg?branch=master
+[![Build Status](https://travis-ci.org/Tyhjis/Will-Code-For-Booze.svg?branch=master)](https://travis-ci.org/Tyhjis/Will-Code-For-Booze)
