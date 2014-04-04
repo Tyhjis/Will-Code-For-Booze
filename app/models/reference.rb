@@ -39,6 +39,7 @@ class Reference < ActiveRecord::Base
         unless note.empty?
             retstr = retstr + ", note = " + "\"" + note + "\""
         end
-        retstr + "}"
+        retstr = retstr + "}"
+        retstr.gsub(/[äö]/, 'ä' => '\"{a}', 'ö' => '\"{o}')
     end
 end

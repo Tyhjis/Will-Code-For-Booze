@@ -6,6 +6,7 @@ class ReferencesController < ApplicationController
   end
 
   def show
+    @bibtex = @reference.to_inproceedings_bib_str
   end
 
   def new
