@@ -9,7 +9,7 @@ class Reference < ActiveRecord::Base
         #optional fields: EDITOR, VOLUME/NUMBER, SERIES, PAGES, ADDRESS, MONTH, ORGANIZATION, PUBLISHER, NOTE, KEY
         #retstr = "@INPROCEEDINGS{ author = " + '}' + author + '}' + ", title = " + '}' + title + '}' + ", booktitle = " + '}' + booktitle + '}' + ", year = " + '}' + #{year} + '}'
         retstr = "@INPROCEEDINGS{ author = {"  + author + '}' + ", title = " + '{' + title + '}' + ", booktitle = " + '{' + booktitle + '}' + ", year = " + '{' + year.to_s + '}'
-        unless editor.empty?
+        unless editor.nil? or editor.empty?
             retstr = retstr + ", editor = " + '{' + editor + '}'
         end
         if volume
@@ -18,25 +18,25 @@ class Reference < ActiveRecord::Base
         if number
             retstr = retstr + ", number = " + '{' + number + '}'
         end
-        unless series.empty?
+        unless series.nil? or series.empty?
             retstr = retstr + ", series = " + '{' + series + '}'
         end
         if pagestart and pageend
             retstr = retstr + ", pages = " + '{' + pagestart + "--" + pageend + '}'
         end
-        unless address.empty?
+        unless address.nil? or address.empty?
             retstr = retstr + ", address = " + '{' + address + '}'
         end
         if month
             retstr = retstr + ", month = " + '{' + month + '}'
         end
-        unless organization.empty?
+        unless organization.nil? or organization.empty?
             retstr = retstr + ", organization = " + '{' + organization + '}'
         end
-        unless publisher.empty?
+        unless publisher.nil? or publisher.empty?
             retstr = retstr + ", publisher = " + '{' + publisher + '}'
         end
-        unless note.empty?
+        unless note.nil? or note.empty?
             retstr = retstr + ", note = " + '{' + note + '}'
         end
         retstr = retstr + '}'
