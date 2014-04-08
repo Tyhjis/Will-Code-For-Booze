@@ -1,7 +1,7 @@
 BibtexForBooze::Application.routes.draw do
 
   resources :references
-  resources :inproceedings
+  resources :inproceedings, :only => [:new, :create, :destroy]
 
   root 'references#index'
 
