@@ -1,7 +1,5 @@
 BibtexForBooze::Application.routes.draw do
 
-  resources :articles
-
   resources :references
   resources :inproceedings, :only => [:new, :create, :destroy]
   resource :articles, only: [:new, :create, :destroy]
