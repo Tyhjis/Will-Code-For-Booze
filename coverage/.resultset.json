@@ -158,6 +158,9 @@
         1,
         null,
         1,
+        null,
+        1,
+        1,
         1,
         null,
         1,
@@ -222,6 +225,10 @@
         1,
         null
       ],
+      "/home/virta/Ohjelmistotuotanto/miniprojekti/Will-Code-For-Booze/app/helpers/articles_helper.rb": [
+        1,
+        null
+      ],
       "/home/virta/Ohjelmistotuotanto/miniprojekti/Will-Code-For-Booze/app/helpers/inproceedings_helper.rb": [
         1,
         null
@@ -230,7 +237,7 @@
         1,
         null
       ],
-      "/home/virta/Ohjelmistotuotanto/miniprojekti/Will-Code-For-Booze/app/models/inproceeding.rb": [
+      "/home/virta/Ohjelmistotuotanto/miniprojekti/Will-Code-For-Booze/app/models/article.rb": [
         1,
         null,
         1,
@@ -297,6 +304,69 @@
         null,
         null
       ],
+      "/home/virta/Ohjelmistotuotanto/miniprojekti/Will-Code-For-Booze/spec/models/inproceeding_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/virta/Ohjelmistotuotanto/miniprojekti/Will-Code-For-Booze/app/models/inproceeding.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
       "/home/virta/Ohjelmistotuotanto/miniprojekti/Will-Code-For-Booze/spec/models/reference_spec.rb": [
         1,
         null,
@@ -324,6 +394,6 @@
         null
       ]
     },
-    "timestamp": 1396952735
+    "timestamp": 1396954414
   }
 }
