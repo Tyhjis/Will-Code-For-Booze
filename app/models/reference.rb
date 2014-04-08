@@ -6,6 +6,14 @@ class Reference < ActiveRecord::Base
     validates :key, uniqueness: true, presence: true
     validates :referencetype, presence: true
 
+    def generate_key
+      key = author.to_s.at(0..4)
+      key += year.to_s
+      key += rand(0..99).to_s
+
+
+    end
+
     def to_bib_str
         
         retstr = "@" + referencetype.upcase + '{'

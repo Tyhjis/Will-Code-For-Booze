@@ -17,7 +17,7 @@ class ReferencesController < ApplicationController
     @references = Reference.all
     @bibstr = ''
     @references.each do |r|
-        @bibstr += "#{r.to_inproceedings_bib_str}<br>"
+        @bibstr += "#{r.to_bib_str}<br>"
     end
     @bibstr
     render :bibtex

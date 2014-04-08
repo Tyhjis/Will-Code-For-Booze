@@ -24,8 +24,11 @@ class InproceedingsController < ApplicationController
   def create
     @inproceeding = Inproceeding.new params.require(:inproceeding).permit(:author, :title, :booktitle, :year,:editor,
                                                                  :volume, :series, :pagestart, :pageend, :address, :month, :organization, :publisher, :note)
+    @inproceeding.key = @inproceeding.generate_key
+
     @inproceeding.referencetype = 'Inproceedings'
     if @inproceeding.save
+
       redirect_to references_path
 
     else

@@ -23,15 +23,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="references_controller.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/controllers/references_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="16" selection-start="324" selection-end="324" vertical-scroll-proportion="0.43965518" vertical-offset="0" max-vertical-offset="825">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="bibtex.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/references/bibtex.html.erb">
           <provider selected="true" editor-type-id="text-editor">
@@ -45,6 +36,18 @@
         <entry file="file://$PROJECT_DIR$/app/views/inproceedings/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="16" column="6" selection-start="484" selection-end="484" vertical-scroll-proportion="-9.75" vertical-offset="6" max-vertical-offset="840">
+              <folding>
+                <marker date="1396952849583" expanded="true" signature="173:462" placeholder="..." />
+                <marker date="1396952849583" expanded="true" signature="306:447" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reference.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/reference.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="0" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2115">
               <folding />
             </state>
           </provider>
@@ -68,10 +71,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="inproceedings_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="inproceedings_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/inproceedings_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="0" selection-start="308" selection-end="837" vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="660">
+            <state line="24" column="4" selection-start="407" selection-end="407" vertical-scroll-proportion="0.62068963" vertical-offset="0" max-vertical-offset="705">
               <folding />
             </state>
           </provider>
@@ -93,7 +96,7 @@
       <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="341" selection-end="341" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1050">
+            <state line="17" column="0" selection-start="499" selection-end="499" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1050">
               <folding />
             </state>
           </provider>
@@ -134,15 +137,15 @@
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/views/references/show.html.erb" />
         <option value="$PROJECT_DIR$/lib/scand_generator.rb" />
-        <option value="$PROJECT_DIR$/app/models/reference.rb" />
         <option value="$PROJECT_DIR$/app/views/references/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/inproceeding_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/inprocedings/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/inproceedings/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/inproceedings_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/references/bibtex.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/references_controller.rb" />
+        <option value="$PROJECT_DIR$/app/models/reference.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/inproceedings_controller.rb" />
       </list>
     </option>
   </component>
@@ -512,7 +515,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32986626" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33466136" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33306772" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -703,41 +706,16 @@
     <entry file="file://$PROJECT_DIR$/app/views/inproceedings/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="6" selection-start="484" selection-end="484" vertical-scroll-proportion="-9.75" vertical-offset="6" max-vertical-offset="840">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/inproceeding.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/reference.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="44" selection-start="541" selection-end="541" vertical-scroll-proportion="0.0" vertical-offset="20" max-vertical-offset="765">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="341" selection-end="341" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1050">
-          <folding />
+          <folding>
+            <marker date="1396952849583" expanded="true" signature="173:462" placeholder="..." />
+            <marker date="1396952849583" expanded="true" signature="306:447" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="203" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/inproceedings_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="0" selection-start="308" selection-end="837" vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="660">
           <folding />
         </state>
       </provider>
@@ -749,9 +727,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/inproceeding.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/references_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="16" selection-start="324" selection-end="324" vertical-scroll-proportion="0.43965518" vertical-offset="0" max-vertical-offset="825">
+        <state line="7" column="10" selection-start="157" selection-end="157" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="0" selection-start="499" selection-end="499" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1050">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/reference.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2115">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/inproceedings_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="4" selection-start="407" selection-end="407" vertical-scroll-proportion="0.62068963" vertical-offset="0" max-vertical-offset="705">
           <folding />
         </state>
       </provider>
