@@ -6,7 +6,7 @@ class InproceedingsController < ApplicationController
   end
 
   def show
-    @bibtex = @inproceeding.to_inproceedings_bib_str
+    @bibtex = @inproceeding.to_bib_str
   end
 
   def new
@@ -24,7 +24,7 @@ class InproceedingsController < ApplicationController
   def create
     @inproceeding = Inproceeding.new params.require(:inproceeding).permit(:author, :title, :booktitle, :year,:editor,
                                                                  :volume, :series, :pagestart, :pageend, :address, :month, :organization, :publisher, :note)
-
+    @inproceeding.referencetype = 'Inproceedings'
     if @inproceeding.save
       redirect_to references_path
 

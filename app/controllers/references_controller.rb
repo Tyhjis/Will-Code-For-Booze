@@ -13,6 +13,16 @@ class ReferencesController < ApplicationController
     @reference = Reference.new
   end
 
+  def bibtex
+    @references = Reference.all
+    @bibstr = ''
+    @references.each do |r|
+        @bibstr += "#{r.to_inproceedings_bib_str}<br>"
+    end
+    @bibstr
+    render :bibtex
+  end
+
   def edit
     set_reference
   end

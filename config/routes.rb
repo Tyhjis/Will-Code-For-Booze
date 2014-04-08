@@ -3,6 +3,8 @@ BibtexForBooze::Application.routes.draw do
   resources :references
   resources :inproceedings, :only => [:new, :create, :destroy]
 
+  get 'bibtex', to: 'references#bibtex'
+
   root 'references#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
