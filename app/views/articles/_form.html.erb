@@ -1,0 +1,53 @@
+<%= form_for(@article) do |f| %>
+  <% if @article.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:</h2>
+
+      <ul>
+      <% @article.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <h2>Required fields: </h2>
+
+    Author: <%= f.text_field :author%>
+    <br>
+    Title: <%= f.text_field :title %>
+    <br>
+    Journal: <%= f.text_field :journal %>
+    <br>
+    Year: <%= f.number_field :year %>
+    <br>
+
+    <h3>Optional fields:</h3>
+    Editor: <%= f.text_field :editor %>
+    <br>
+    Booktitle: <%= f.text_field :booktitle %>
+    <br>
+    Volume: <%= f.text_field :volume %>
+    <br>
+    Series: <%= f.text_field :series %>
+    <br>
+    Starting page: <%= f.text_field :pagestart %>
+    <br>
+    End page: <%= f.text_field :pageend %>
+    <br>
+    Address: <%= f.text_field :address %>
+    <br>
+    Month: <%= f.text_field :month %>
+    <br>
+    Organization: <%= f.text_field :organization %>
+    <br>
+    Publisher: <%= f.text_field :publisher %>
+    <br>
+    Note: <%= f.text_field :note %>
+    <br>
+    <%= f.submit %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
