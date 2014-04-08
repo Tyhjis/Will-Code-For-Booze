@@ -1,6 +1,8 @@
-
-require 'simplecov'
-SimpleCov.start
+#use coveralls test coverage reporting instead of simplecov
+require 'coveralls'
+Coveralls.wear!('rails')
+#require 'simplecov'
+#SimpleCov.start
 
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 ENV["RAILS_ENV"] ||= 'test'
