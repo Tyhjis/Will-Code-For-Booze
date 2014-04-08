@@ -65,7 +65,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/references/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="525" selection-end="525" vertical-scroll-proportion="-13.75" vertical-offset="0" max-vertical-offset="480">
+            <state line="24" column="0" selection-start="531" selection-end="531" vertical-scroll-proportion="-13.75" vertical-offset="30" max-vertical-offset="510">
               <folding />
             </state>
           </provider>
@@ -74,7 +74,7 @@
       <file leaf-file-name="inproceedings_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/inproceedings_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="4" selection-start="407" selection-end="407" vertical-scroll-proportion="0.62068963" vertical-offset="0" max-vertical-offset="705">
+            <state line="21" column="4" selection-start="395" selection-end="395" vertical-scroll-proportion="0.54310346" vertical-offset="0" max-vertical-offset="705">
               <folding />
             </state>
           </provider>
@@ -96,7 +96,7 @@
       <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="499" selection-end="499" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1050">
+            <state line="18" column="0" selection-start="553" selection-end="553" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="1065">
               <folding />
             </state>
           </provider>
@@ -659,7 +659,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/references/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="525" selection-end="525" vertical-scroll-proportion="-13.75" vertical-offset="0" max-vertical-offset="480">
+        <state line="24" column="0" selection-start="531" selection-end="531" vertical-scroll-proportion="-13.75" vertical-offset="30" max-vertical-offset="510">
           <folding />
         </state>
       </provider>
@@ -743,7 +743,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="499" selection-end="499" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1050">
+        <state line="18" column="0" selection-start="553" selection-end="553" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="1065">
           <folding />
         </state>
       </provider>
@@ -757,7 +757,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/inproceedings_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="4" selection-start="407" selection-end="407" vertical-scroll-proportion="0.62068963" vertical-offset="0" max-vertical-offset="705">
+        <state line="21" column="4" selection-start="395" selection-end="395" vertical-scroll-proportion="0.54310346" vertical-offset="0" max-vertical-offset="705">
           <folding />
         </state>
       </provider>

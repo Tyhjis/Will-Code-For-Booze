@@ -19,7 +19,7 @@ class InproceedingsController < ApplicationController
 
   #def set_inproceeding
   #  @inproceeding = Inproceeding.find(params[:id])
-  #end
+  # end
 
   def create
     @inproceeding = Inproceeding.new params.require(:inproceeding).permit(:author, :title, :booktitle, :year,:editor,
