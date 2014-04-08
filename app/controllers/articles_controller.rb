@@ -18,22 +18,18 @@ class ArticlesController < ApplicationController
   end
 
   # GET /articles/1/edit
-  def edit
-  end
+  #def edit
+  #end
 
   # POST /articles
   # POST /articles.json
   def create
-    @article = Article.new(article_params)
+    @article = Article.new params.require(:article).permit(:author, :title, :journal, :year, :volume, :numbe, :pagestart, :pageend, :month, :note, :key)
 
-    respond_to do |format|
-      if @article.save
-        format.html { redirect_to @article, notice: 'Article was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @article }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @article.errors, status: :unprocessable_entity }
-      end
+    if @article.save
+      redirect_to references_path
+    else
+      render :new
     end
   end
 
@@ -53,13 +49,13 @@ class ArticlesController < ApplicationController
 
   # DELETE /articles/1
   # DELETE /articles/1.json
-  def destroy
-    @article.destroy
-    respond_to do |format|
-      format.html { redirect_to articles_url }
-      format.json { head :no_content }
-    end
-  end
+  #def destroy
+  #  @article.destroy
+  #  respond_to do |format|
+  #    format.html { redirect_to articles_url }
+  #    format.json { head :no_content }
+  #  end
+  #end
 
   private
     # Use callbacks to share common setup or constraints between actions.
