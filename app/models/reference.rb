@@ -38,22 +38,22 @@ class Reference < ActiveRecord::Base
             retstr = retstr + ", editor = " + '{' + editor + '}'
         end
         if volume
-            retstr = retstr + ", volume = " + '{' + volume + '}'
+            retstr = retstr + ", volume = " + '{' + volume.to_s + '}'
         end
         if number
-            retstr = retstr + ", number = " + '{' + number + '}'
+            retstr = retstr + ", number = " + '{' + number.to_s + '}'
         end
         unless series.nil? or series.empty?
-            retstr = retstr + ", series = " + '{' + series + '}'
+            retstr = retstr + ", series = " + '{' + series.to_s + '}'
         end
         if pagestart and pageend
-            retstr = retstr + ", pages = " + '{' + pagestart + "--" + pageend + '}'
+            retstr = retstr + ", pages = " + '{' + pagestart.to_s + "--" + pageend.to_s + '}'
         end
         unless address.nil? or address.empty?
             retstr = retstr + ", address = " + '{' + address + '}'
         end
         if month
-            retstr = retstr + ", month = " + '{' + month + '}'
+            retstr = retstr + ", month = " + '{' + month.to_s + '}'
         end
         unless organization.nil? or organization.empty?
             retstr = retstr + ", organization = " + '{' + organization + '}'
@@ -68,13 +68,13 @@ class Reference < ActiveRecord::Base
             retstr = retstr + ", annote = " + '{' + annote + '}'        
         end
         unless chapter.nil? or chapter.empty?
-            retstr = retstr + ", chapter = " + '{' + chapter + '}'        
+            retstr = retstr + ", chapter = " + '{' + chapter.to_s + '}'
         end
         unless crossref.nil? or crossref.empty?
             retstr = retstr + ", crossref = " + '{' + crossref + '}'        
         end
         unless edition.nil? or edition.empty?
-            retstr = retstr + ", edition = " + '{' + edition + '}'
+            retstr = retstr + ", edition = " + '{' + edition.to_s + '}'
         end
         unless eprint.nil? or eprint.empty?
             retstr = retstr + ", eprint = " + '{' + eprint + '}'        
@@ -94,7 +94,7 @@ class Reference < ActiveRecord::Base
         end
 
         if number
-            retstr = retstr + ", number = " + '{' + number + '}'
+            retstr = retstr + ", number = " + '{' + number.to_s + '}'
         end
 
         unless school.nil? or school.empty?
