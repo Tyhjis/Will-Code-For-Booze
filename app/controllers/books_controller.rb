@@ -24,18 +24,30 @@ class BooksController < ApplicationController
   # POST /books
   # POST /books.json
   def create
-    @book = Book.new(book_params)
-
-    respond_to do |format|
-      if @book.save
-        format.html { redirect_to @book, notice: 'Book was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @book }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @book.errors, status: :unprocessable_entity }
-      end
+    @book = Book.new params.require(:book).permit(:author, :title, :publisher, :year, :volume, :number, :pagestart, :pageend, :month, :note, :key)
+    if @book.key.nil? or @book.key.empty?
+      @book.key = @book.keygen
+    end
+    @book.referencetype="book"
+    if @book.save
+      redirect_to references_path
+    else
+      render :new
     end
   end
+
+  #def create
+  #  @article = Article.new params.require(:article).permit(:author, :title, :journal, :year, :volume, :numbe, :pagestart, :pageend, :month, :note, :key)
+  #  if @article.key.nil?
+  #    @article.key = @article.keygen
+  #  end
+  #  @article.referencetype="article"
+  #  if @article.save
+  #    redirect_to references_path
+  #  else
+  #    render :new
+  #  end
+  #end
 
   # PATCH/PUT /books/1
   # PATCH/PUT /books/1.json
