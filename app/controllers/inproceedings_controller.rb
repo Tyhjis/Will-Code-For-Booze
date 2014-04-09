@@ -26,7 +26,7 @@ class InproceedingsController < ApplicationController
                                                                  :volume, :series, :pagestart, :pageend, :address, :month, :organization, :publisher, :note)
 
     @inproceeding.referencetype = 'Inproceedings'
-    if @inproceeding.key.nil?
+    if @inproceeding.key.nil? or @inproceeding.key.empty?
       @inproceeding.key = @inproceeding.keygen
     end
     if @inproceeding.save
