@@ -21,6 +21,10 @@ class Reference < ActiveRecord::Base
         
         retstr = "@" + referencetype.upcase + '{'
 
+        unless key.nil? or key.empty?
+          retstr = retstr + key + ','
+        end
+
         unless author.nil? or author.empty?
             retstr = retstr + " author = " + '{' + author + '}'
         end
@@ -87,10 +91,6 @@ class Reference < ActiveRecord::Base
         end
         unless journal.nil? or journal.empty?
             retstr = retstr + ", journal = " + '{' + journal + '}'
-        end
-
-        unless key.nil? or key.empty?
-            retstr = retstr + ", key = " + '{' + key + '}'
         end
 
         if number
