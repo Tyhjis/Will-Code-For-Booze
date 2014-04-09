@@ -25,7 +25,7 @@ class ArticlesController < ApplicationController
   # POST /articles.json
   def create
     @article = Article.new params.require(:article).permit(:author, :title, :journal, :year, :volume, :numbe, :pagestart, :pageend, :month, :note, :key)
-    if @article.key.nil?
+    if @article.key.nil? or @article.key.empty?
       @article.key = @article.keygen
     end
     @article.referencetype="article"
