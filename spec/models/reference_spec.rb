@@ -11,7 +11,7 @@ describe Reference do
   it "returns correct bibtex string" do
         ref = Reference.new key:'erkki', referencetype:'inproceedings', author:'First Author and Second Author', title:'Some publication title', booktitle:'lol', year:1653
         str = ref.to_bib_str
-        str.should == '@INPROCEEDINGS{ author = {First Author and Second Author}, title = {Some publication title}, booktitle = {lol}, year = {1653}, key = {erkki}}'
+        str.should == '@INPROCEEDINGS{erkki, author = {First Author and Second Author}, title = {Some publication title}, booktitle = {lol}, year = {1653}'
   end
 
   it "validates the required field key" do
