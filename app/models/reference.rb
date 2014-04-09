@@ -2,7 +2,6 @@ class Reference < ActiveRecord::Base
 
     include ScandGenerator
 
-    validates :year, numericality: true
     validates :key, uniqueness: true, presence: true
     validates :referencetype, presence: true
 
@@ -10,8 +9,6 @@ class Reference < ActiveRecord::Base
       key = author.to_s.at(0..4)
       key += year.to_s
       key += rand(0..99).to_s
-
-
     end
 
     def to_bib_str
