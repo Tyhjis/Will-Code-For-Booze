@@ -31,7 +31,7 @@ class ArticlesController < ApplicationController
     @article.referencetype="article"
 
     if @article.save
-      redirect_to references_path
+      redirect_to references_path, notice: "Article type reference created"
     else
       render :new
     end
