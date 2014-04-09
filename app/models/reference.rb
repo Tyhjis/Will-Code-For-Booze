@@ -6,6 +6,16 @@ class Reference < ActiveRecord::Base
     validates :key, uniqueness: true, presence: true
     validates :referencetype, presence: true
 
+    def keygen
+      generated_key += author(0..3).to_s
+      generated_key += year.to_s
+      generated_key += rand(0..99).to_s
+      unless Inproceeding.all.find_by(key: generated_key).nil?
+        generated_key = keygen()
+      end
+      generated_key
+    end
+
     def to_bib_str
         
         retstr = "@" + referencetype.upcase + '{'
