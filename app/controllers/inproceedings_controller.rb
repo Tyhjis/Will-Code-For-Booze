@@ -27,7 +27,7 @@ class InproceedingsController < ApplicationController
 
     @inproceeding.referencetype = 'Inproceedings'
     if @inproceeding.key.nil? or @inproceeding.key.empty?
-      @inproceeding.key = @inproceeding.keygennp
+      @inproceeding.key = @inproceeding.keygen
     end
     if @inproceeding.save
 
