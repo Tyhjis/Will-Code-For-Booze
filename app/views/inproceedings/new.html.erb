@@ -18,9 +18,10 @@
         </div>
     <% end %>
 
+    <h2>Required fields: </h2>
+
     Key: <%= f.text_field :key%>
     <br>
-
     Author: <%= f.text_field :author%>
     <br>
     Title: <%= f.text_field :title %>
@@ -29,6 +30,9 @@
     <br>
     Year: <%= f.number_field :year %>
     <br>
+
+    <h2>Optional fields: </h2>
+
     Editor: <%= f.text_field :editor %>
     <br>
     Volume: <%= f.text_field :volume %>

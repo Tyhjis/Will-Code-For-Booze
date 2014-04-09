@@ -23,7 +23,7 @@ class InproceedingsController < ApplicationController
 
   def create
     @inproceeding = Inproceeding.new params.require(:inproceeding).permit(:author, :title, :booktitle, :year,:editor,
-                                                                 :volume, :series, :pagestart, :pageend, :address, :month, :organization, :publisher, :note)
+                                                                 :volume, :series, :pagestart, :pageend, :address, :month, :organization, :publisher, :note, :key)
 
     @inproceeding.referencetype = 'Inproceedings'
     if @inproceeding.key.nil? or @inproceeding.key.empty?
@@ -31,7 +31,7 @@ class InproceedingsController < ApplicationController
     end
     if @inproceeding.save
 
-      redirect_to references_path
+      redirect_to references_path, notice: "Inproceedings type reference created"
 
     else
       render :new
