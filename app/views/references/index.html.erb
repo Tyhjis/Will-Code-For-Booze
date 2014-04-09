@@ -1,11 +1,13 @@
 <h1>Listing references</h1>
 
+<%= link_to 'Get BIBTEX', bibtex_path %>
+
 <table>
   <thead>
     <tr>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>Author</th>
+      <th>Title</th>
+      <!--<th></th>-->
     </tr>
   </thead>
 
@@ -15,7 +17,7 @@
         <td><%= reference.author%>, <%= reference.title%></td>
         <td><%= link_to 'Show', reference %></td>
         <td><%= link_to 'Edit', edit_reference_path(reference) %></td>
-        <td><%= link_to 'Destroy', reference, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <!--<td><%= link_to 'Destroy', reference, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
       </tr>
     <% end %>
   </tbody>
