@@ -2,6 +2,8 @@
 
 <h2>Create new inproceeding</h2>
 
+
+
 <%= form_for(@inproceeding) do |f| %>
 
     <% if @inproceeding.errors.any? %>
@@ -15,8 +17,6 @@
           </ul>
         </div>
     <% end %>
-
-<%= form_for(@inproceeding) do |f| %>
 
     Key: <%= f.text_field :key%>
     <br>
