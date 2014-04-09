@@ -27,11 +27,11 @@ class InproceedingsController < ApplicationController
 
     @inproceeding.referencetype = 'Inproceedings'
     if @inproceeding.key.nil? or @inproceeding.key.empty?
-      @inproceeding.key = @inproceeding.keygen
+      @inproceeding.key = @inproceeding.keygennp
     end
     if @inproceeding.save
 
-      redirect_to references_path
+      redirect_to references_path, notice: "Inproceedings type reference created"
 
     else
       render :new

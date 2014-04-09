@@ -30,7 +30,7 @@ class BooksController < ApplicationController
     end
     @book.referencetype="book"
     if @book.save
-      redirect_to references_path
+      redirect_to references_path, notice: "Book type reference created"
     else
       render :new
     end
