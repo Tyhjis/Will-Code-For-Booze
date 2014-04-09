@@ -7,7 +7,8 @@ class Reference < ActiveRecord::Base
 
 
     def keygen
-      generated_key += author(0..3).to_s
+      generated_key = ''  
+      generated_key += author.to_s[0..2]
       generated_key += year.to_s
       generated_key += rand(0..99).to_s
       unless Inproceeding.all.find_by(key: generated_key).nil?
