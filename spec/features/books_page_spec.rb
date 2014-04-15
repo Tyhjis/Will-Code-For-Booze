@@ -2,13 +2,13 @@ require 'spec_helper'
 
 describe 'Books page' do
   it 'should not have any before been created' do
-    visit books_path
-    expect(page).to have_content('Listing books')
+    visit references_path
+    expect(page).to have_content('Listing references')
   end
 
   describe 'with correct parameters' do
     it 'should be able to create a new book reference' do
-      visit books_path
+      visit references_path
       click_link 'New Book'
       fill_in('book_key', with:'1234569992')
       fill_in('book_author', with:'Erkki Hervanta')
@@ -25,7 +25,7 @@ describe 'Books page' do
 
   describe 'with wrong or empty parameters' do
     it 'should not be able to create book reference' do
-      visit books_path
+      visit references_path
       click_link 'New Book'
       fill_in('book_author', with:'Erkki')
       expect{
@@ -34,7 +34,7 @@ describe 'Books page' do
     end
 
     it 'should contain an error message' do
-      visit books_path
+      visit references_path
       click_link 'New Book'
       click_button('Create Book')
       expect(page).to have_content("Author can't be blank")
