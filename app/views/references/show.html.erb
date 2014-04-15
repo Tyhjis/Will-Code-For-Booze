@@ -4,18 +4,28 @@
 
 <h1><%=@reference.referencetype%>: <%= @reference.key %></h1>
 
-<ul>
-  <li>Author: <%= @reference.author %></li>
-  <li>Title: <%= @reference.title %></li>
-  <li>Booktitle: <%= @reference.booktitle %></li>
-  <li>Editor: <%= @reference.editor %></li>
-  <li>Year: <%= @reference.year %></li>
-  <li>Pages: <%= @reference.pagestart %> - <%= @reference.pageend %> </li>
-  <li>Publisher: <%= @reference.publisher %></li>
-  <li>Month: <%= @reference.month %></li>
-  <li>Address: <%= @reference.address %></li>
-  <li>Note: <%= @reference.note %></li>
-</ul>
+<dl class="dl-horizontal">
+  <dt>Author:</dt>
+  <dd><%= @reference.author %></dd>
+  <dt>Title:</dt>
+  <dd><%= @reference.title %></dd>
+  <dt>Booktitle:</dt>
+  <dd><%= @reference.booktitle %></dd>
+  <dt>Editor:</dt>
+  <dd><%= @reference.editor %></dd>
+  <dt>Year:</dt>
+  <dd><%= @reference.year %></dd>
+  <dt>Pages:</dt>
+  <dd><%= @reference.pagestart %> - <%= @reference.pageend %> </dd>
+  <dt>Publisher:</dt>
+  <dd><%= @reference.publisher %></dd>
+  <dt>Month:</dt>
+  <dd><%= @reference.month %></dd>
+  <dt>Address:</dt>
+  <dd><%= @reference.address %></dd>
+  <dt>Note:</dt>
+  <dd><%= @reference.note %></dd>
+</dl>
 
 <h2>As bibtex: </h2>
 

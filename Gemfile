@@ -77,7 +77,7 @@ group :doc do
 end
 
 # use twitter-bootstrap
-# gem 'bootstrap-sass'
+gem 'bootstrap-sass'
 group :development do
   gem 'rails_layout'
 end
