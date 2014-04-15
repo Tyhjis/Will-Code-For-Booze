@@ -35,3 +35,6 @@
     <%= link_to 'Edit', edit_inproceeding_path(@reference) %> |
 <% end%>
 <%= link_to 'Back', references_path %>
+
+<h3>Share:</h3>
+<%= social_share_button_tag(@reference.title, :url => reference_path(@reference.id)) %>
