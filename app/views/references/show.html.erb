@@ -28,5 +28,13 @@
 <br>
 <br>
 
-<%= link_to 'Edit', edit_reference_path(@reference) %> |
+<% if @reference.instance_of? Article%>
+    <%= link_to 'Edit', edit_article_path(@reference) %> |
+<% end%>
+<% if @reference.instance_of? Book%>
+    <%= link_to 'Edit', edit_book_path(@reference) %> |
+<% end%>
+<% if @reference.instance_of? Inproceeding%>
+    <%= link_to 'Edit', edit_inproceeding_path(@reference) %> |
+<% end%>
 <%= link_to 'Back', references_path %>

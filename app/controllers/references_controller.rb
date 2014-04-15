@@ -9,9 +9,9 @@ class ReferencesController < ApplicationController
     @bibtex = @reference.to_bib_str
   end
 
-  def new
-    @reference = Reference.new
-  end
+ # def new
+  #  @reference = Reference.new
+  #end
 
   def bibtex
     @references = Reference.all
@@ -23,26 +23,37 @@ class ReferencesController < ApplicationController
   end
 
   def edit
-    set_reference
+
+    @reference = set_reference
+
   end
 
   def set_reference
     @reference = Reference.find(params[:id])
-  end
-
-  def create
-    @reference = Reference.new params.require(:reference).permit(:author, :title, :booktitle, :year,:editor,
-                               :volume, :series, :pagestart, :pageend, :address, :month, :organization, :publisher, :note)
-
-    if not @reference.author.nil? and not @reference.title.nil? and not @reference.booktitle.nil?  and  @reference.save
-      redirect_to references_path
-
-    else
-      @reference = Reference.new
-      render :new
+    if @reference.referencetype == "article"
+        @reference = Article.find(params[:id])
     end
-
+    if @reference.referencetype == "book"
+      @reference = Book.find(params[:id])
+    end
+    if @reference.referencetype == "Inproceedings"
+      @reference = Inproceeding.find(params[:id])
+    end
   end
+
+#  def create
+#    @reference = Reference.new params.require(:reference).permit(:author, :title, :booktitle, :year,:editor,
+#                               :volume, :series, :pagestart, :pageend, :address, :month, :organization, :publisher, :note)#
+#
+#    if not @reference.author.nil? and not @reference.title.nil? and not @reference.booktitle.nil?  and  @reference.save
+#      redirect_to references_path
+#
+#    else
+#      @reference = Reference.new
+#      render :new
+   # end
+
+  #end
 
 
 end

@@ -18,13 +18,13 @@ class ArticlesController < ApplicationController
   end
 
   # GET /articles/1/edit
-  #def edit
-  #end
+  def edit
+  end
 
   # POST /articles
   # POST /articles.json
   def create
-    @article = Article.new params.require(:article).permit(:author, :title, :journal, :year, :volume, :numbe, :pagestart, :pageend, :month, :note, :key)
+    @article = Article.new article_params
     if @article.key.nil? or @article.key.empty?
       @article.key = @article.keygen
     end
@@ -39,17 +39,17 @@ class ArticlesController < ApplicationController
 
   # PATCH/PUT /articles/1
   # PATCH/PUT /articles/1.json
-  #def update
-  #  respond_to do |format|
-  #    if @article.update(article_params)
-  #      format.html { redirect_to @article, notice: 'Article was successfully updated.' }
-  #      format.json { head :no_content }
-  #    else
-  #      format.html { render action: 'edit' }
-  #      format.json { render json: @article.errors, status: :unprocessable_entity }
-  #    end
-  #  end
-  #end
+    def update
+      respond_to do |format|
+        if @article.update(article_params)
+          format.html { redirect_to references_path, notice: 'Article was successfully updated.' }
+          format.json { head :no_content }
+        else
+          format.html { render action: 'edit' }
+          format.json { render json: @article.errors, status: :unprocessable_entity }
+        end
+      end
+    end
 
   # DELETE /articles/1
   # DELETE /articles/1.json
@@ -68,7 +68,7 @@ class ArticlesController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    #def article_params
-    #  params[:article]
-    #end
+    def article_params
+      params.require(:article).permit(:author, :title, :journal, :year, :volume, :numbe, :pagestart, :pageend, :month, :note, :key)
+    end
 end
