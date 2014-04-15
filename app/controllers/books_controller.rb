@@ -28,7 +28,7 @@ class BooksController < ApplicationController
     if @book.key.nil? or @book.key.empty?
       @book.key = @book.keygen
     end
-    @book.referencetype="book"
+    @book.referencetype='Book'
     if @book.save
       redirect_to references_path, notice: "Book type reference created"
     else

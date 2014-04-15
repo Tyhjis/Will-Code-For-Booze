@@ -1,3 +1,6 @@
-<h1>Edit Inproceedings</h1>
+<h1>Edit Inproceedings: <%= @inproceeding.key %></h1>
 
 <%= render 'form'%>
+
+<%= link_to 'Show', reference_path(@inproceeding)%> |
+<%= link_to 'Back', references_path %>

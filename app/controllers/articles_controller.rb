@@ -28,7 +28,7 @@ class ArticlesController < ApplicationController
     if @article.key.nil? or @article.key.empty?
       @article.key = @article.keygen
     end
-    @article.referencetype="article"
+    @article.referencetype='Article'
 
     if @article.save
       redirect_to references_path, notice: "Article type reference created"

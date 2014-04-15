@@ -2,7 +2,7 @@
 
 <br>
 
-<h1>reference: <%= @reference.title %></h1>
+<h1><%=@reference.referencetype%>: <%= @reference.key %></h1>
 
 <ul>
   <li>Author: <%= @reference.author %></li>
@@ -23,18 +23,15 @@
 
 <p>To use this as a reference paste the following into a file named <i>file_name<b>.bib</b></i>.</p>
 
-<br>
 <%= @bibtex %>
 <br>
 <br>
 
-<% if @reference.instance_of? Article%>
+<% if @reference.referencetype=='Article'%>
     <%= link_to 'Edit', edit_article_path(@reference) %> |
-<% end%>
-<% if @reference.instance_of? Book%>
+<% elsif @reference.referencetype=='Book'%>
     <%= link_to 'Edit', edit_book_path(@reference) %> |
-<% end%>
-<% if @reference.instance_of? Inproceeding%>
+<% elsif @reference.referencetype=='Inproceedings'%>
     <%= link_to 'Edit', edit_inproceeding_path(@reference) %> |
 <% end%>
 <%= link_to 'Back', references_path %>

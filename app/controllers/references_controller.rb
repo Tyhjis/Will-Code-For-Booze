@@ -1,5 +1,5 @@
 class ReferencesController < ApplicationController
-  before_action :set_reference, only: :show
+  before_action :set_reference, only: [:show, :edit]
 
   def index
     @references = Reference.all
@@ -30,15 +30,6 @@ class ReferencesController < ApplicationController
 
   def set_reference
     @reference = Reference.find(params[:id])
-    if @reference.referencetype == "article"
-        @reference = Article.find(params[:id])
-    end
-    if @reference.referencetype == "book"
-      @reference = Book.find(params[:id])
-    end
-    if @reference.referencetype == "Inproceedings"
-      @reference = Inproceeding.find(params[:id])
-    end
   end
 
 #  def create

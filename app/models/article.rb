@@ -6,6 +6,4 @@ class Article < Reference
   validates :year, numericality: { greater_than_or_equal_to: 1800,
                                   less_than_or_equal_to: Date.today.year }
 
-
-
 end

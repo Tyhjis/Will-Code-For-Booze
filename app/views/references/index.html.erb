@@ -7,6 +7,7 @@
 <table>
   <thead>
     <tr>
+      <th>Type</th>
       <th>Key</th>
       <th>Author</th>
       <th>Title</th>
@@ -20,6 +21,7 @@
   <tbody>
     <% @references.each do |reference| %>
       <tr>
+        <td><%= reference.referencetype %></td>
         <td><%= reference.key if reference.key %></td>
         <td><%= reference.author if reference.author %></td>
         <td><%= reference.title if reference.title %></td>
@@ -28,7 +30,15 @@
         <td><%= reference.booktitle if reference.booktitle %></td>
         <td><%= reference.pagestart if reference.pagestart %> - <%= reference.pageend if reference.pageend %></td>
         <td><%= link_to 'Show', reference %></td>
-        <td><%= link_to 'Edit', edit_reference_path(reference) %></td>
+        <td>
+          <% if reference.referencetype == 'Article' %>
+            <%= link_to 'Edit', edit_article_path(reference) %>
+          <% elsif reference.referencetype == 'Inproceedings' %>
+             <%= link_to 'Edit', edit_inproceeding_path(reference) %>
+          <% elsif reference.referencetype == 'Book' %>
+             <%= link_to 'Edit', edit_book_path(reference) %>
+          <% end %>
+        </td>
         <!--<td><%= link_to 'Destroy', reference, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
       </tr>
     <% end %>
