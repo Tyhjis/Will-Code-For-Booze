@@ -1,10 +1,11 @@
 BibtexForBooze::Application.routes.draw do
 
-  resources :books
+
 
   resources :references
-  resources :inproceedings, :only => [:new, :create, :destroy, :edit]
-  resources :articles, only: [:new, :create, :destroy, :edit]
+  resources :books, :only => [:new, :create, :destroy, :edit, :update]
+  resources :inproceedings, :only => [:new, :create, :destroy, :edit, :update]
+  resources :articles, :only => [:new, :create, :destroy, :edit, :update]
 
   get 'bibtex', to: 'references#bibtex'
 
