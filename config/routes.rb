@@ -2,7 +2,7 @@ BibtexForBooze::Application.routes.draw do
 
   resources :books
 
-  resources :references , :only => [:new, :create, :destroy, :edit, :show]
+  resources :references
   resources :inproceedings, :only => [:new, :create, :destroy, :edit]
   resources :articles, only: [:new, :create, :destroy, :edit]
 
