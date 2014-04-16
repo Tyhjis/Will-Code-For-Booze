@@ -14,3 +14,36 @@
  *= require_self
  *= require social-share-button
  */
+
+main{
+  -webkit-transition-property: color, background;
+  -webkit-transition-duration: 0.5s;
+  -webkit-transition-timing-function: linear, ease-in;
+}
+
+main:hover
+{
+  color:darkred;
+  background:orange;
+}
+
+header{
+  -webkit-transition-property: color, background;
+  -webkit-transition-duration: 0.5s;
+  -webkit-transition-timing-function: linear, ease-in;
+}
+
+header:hover{
+  background:green;
+}
+
+a{
+  -webkit-transition-property: color, background;
+  -webkit-transition-duration: 0.5s;
+  -webkit-transition-timing-function: linear, ease-in;
+}
+
+a:hover{
+  color:blueviolet;
+  background:yellow;
+}
