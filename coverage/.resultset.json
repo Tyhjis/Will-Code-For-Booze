@@ -1,27 +1,27 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/virta/Ohjelmistotuotanto/miniprojekti/Will-Code-For-Booze/app/helpers/application_helper.rb": [
+      "/home/jonu/Will-Code-For-Booze/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/home/virta/Ohjelmistotuotanto/miniprojekti/Will-Code-For-Booze/app/helpers/articles_helper.rb": [
+      "/home/jonu/Will-Code-For-Booze/app/helpers/articles_helper.rb": [
         1,
         null
       ],
-      "/home/virta/Ohjelmistotuotanto/miniprojekti/Will-Code-For-Booze/app/helpers/books_helper.rb": [
+      "/home/jonu/Will-Code-For-Booze/app/helpers/books_helper.rb": [
         1,
         null
       ],
-      "/home/virta/Ohjelmistotuotanto/miniprojekti/Will-Code-For-Booze/app/helpers/inproceedings_helper.rb": [
+      "/home/jonu/Will-Code-For-Booze/app/helpers/inproceedings_helper.rb": [
         1,
         null
       ],
-      "/home/virta/Ohjelmistotuotanto/miniprojekti/Will-Code-For-Booze/app/helpers/references_helper.rb": [
+      "/home/jonu/Will-Code-For-Booze/app/helpers/references_helper.rb": [
         1,
         null
       ],
-      "/home/virta/Ohjelmistotuotanto/miniprojekti/Will-Code-For-Booze/app/models/article.rb": [
+      "/home/jonu/Will-Code-For-Booze/app/models/article.rb": [
         1,
         null,
         1,
@@ -32,7 +32,7 @@
         null,
         null
       ],
-      "/home/virta/Ohjelmistotuotanto/miniprojekti/Will-Code-For-Booze/app/models/reference.rb": [
+      "/home/jonu/Will-Code-For-Booze/app/models/reference.rb": [
         1,
         null,
         1,
@@ -172,21 +172,21 @@
         null,
         null
       ],
-      "/home/virta/Ohjelmistotuotanto/miniprojekti/Will-Code-For-Booze/lib/scand_generator.rb": [
+      "/home/jonu/Will-Code-For-Booze/lib/scand_generator.rb": [
         1,
         1,
         5,
         null,
         null
       ],
-      "/home/virta/Ohjelmistotuotanto/miniprojekti/Will-Code-For-Booze/app/models/book.rb": [
+      "/home/jonu/Will-Code-For-Booze/app/models/book.rb": [
         1,
         1,
         1,
         1,
         null
       ],
-      "/home/virta/Ohjelmistotuotanto/miniprojekti/Will-Code-For-Booze/app/models/inproceeding.rb": [
+      "/home/jonu/Will-Code-For-Booze/app/models/inproceeding.rb": [
         1,
         null,
         1,
@@ -197,12 +197,12 @@
         null,
         null
       ],
-      "/home/virta/Ohjelmistotuotanto/miniprojekti/Will-Code-For-Booze/app/controllers/references_controller.rb": [
+      "/home/jonu/Will-Code-For-Booze/app/controllers/references_controller.rb": [
         1,
         1,
         null,
         1,
-        17,
+        23,
         null,
         null,
         1,
@@ -232,6 +232,15 @@
         1,
         null,
         null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
         null,
         null,
         null,
@@ -249,14 +258,14 @@
         null,
         null
       ],
-      "/home/virta/Ohjelmistotuotanto/miniprojekti/Will-Code-For-Booze/app/controllers/application_controller.rb": [
+      "/home/jonu/Will-Code-For-Booze/app/controllers/application_controller.rb": [
         1,
         null,
         null,
         1,
         null
       ],
-      "/home/virta/Ohjelmistotuotanto/miniprojekti/Will-Code-For-Booze/app/controllers/books_controller.rb": [
+      "/home/jonu/Will-Code-For-Booze/app/controllers/books_controller.rb": [
         1,
         1,
         null,
@@ -344,7 +353,7 @@
         null,
         null
       ],
-      "/home/virta/Ohjelmistotuotanto/miniprojekti/Will-Code-For-Booze/app/controllers/articles_controller.rb": [
+      "/home/jonu/Will-Code-For-Booze/app/controllers/articles_controller.rb": [
         1,
         1,
         null,
@@ -361,39 +370,39 @@
         null,
         null,
         1,
+        8,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        7,
+        7,
+        2,
+        null,
+        7,
+        null,
+        7,
+        6,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        3,
+        3,
         4,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        1,
-        3,
-        3,
         2,
         null,
-        3,
-        null,
-        3,
         2,
-        null,
         1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
         null,
         null,
         null,
@@ -411,16 +420,16 @@
         1,
         null,
         1,
-        0,
+        7,
         null,
         null,
         null,
         1,
-        3,
+        10,
         null,
         null
       ],
-      "/home/virta/Ohjelmistotuotanto/miniprojekti/Will-Code-For-Booze/app/controllers/inproceedings_controller.rb": [
+      "/home/jonu/Will-Code-For-Booze/app/controllers/inproceedings_controller.rb": [
         1,
         1,
         null,
@@ -482,6 +491,6 @@
         null
       ]
     },
-    "timestamp": 1397642353
+    "timestamp": 1397645851
   }
 }
