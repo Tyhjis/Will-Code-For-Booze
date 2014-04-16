@@ -32,6 +32,15 @@ class ReferencesController < ApplicationController
     @reference = Reference.find(params[:id])
   end
 
+  def destroy
+    set_reference
+    @reference.destroy
+    respond_to do |format|
+      format.html { redirect_to references_path, notice: 'Reference was successfully destroyed' }
+      format.json { head :no_content }
+    end
+  end
+
 #  def create
 #    @reference = Reference.new params.require(:reference).permit(:author, :title, :booktitle, :year,:editor,
 #                               :volume, :series, :pagestart, :pageend, :address, :month, :organization, :publisher, :note)#
