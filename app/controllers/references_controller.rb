@@ -23,9 +23,6 @@ class ReferencesController < ApplicationController
   end
 
   def edit
-
-    @reference = set_reference
-
   end
 
   def set_reference
