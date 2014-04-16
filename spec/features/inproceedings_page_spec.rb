@@ -53,6 +53,24 @@ describe 'Inproceedings page' do
     expect(page).to have_content 'Jaska Jokunen'
   end
 
+  it 'does not save if incorrectly modified' do
+    click_link 'New Inproceeding'
+    fill_in('inproceeding_author', with:'jörö')
+    fill_in('inproceeding_title', with:'teosX')
+    fill_in('inproceeding_booktitle', with:'jotain')
+    fill_in('inproceeding_year', with:'2012')
+    click_button('Create Inproceeding')
+
+    click_link 'Edit'
+    expect(page).to have_content 'Edit Inproceedings:'
+
+    fill_in('inproceeding_author', with:'')
+    expect{
+      click_button('Update Inproceeding')
+    }.to change{Inproceeding.count}.by(0)
+    expect(page).not_to have_content 'Inproceedings was successfully updated.'
+  end
+
   it 'correctly includes a new attribute' do
     click_link 'New Inproceeding'
     fill_in('inproceeding_author', with:'jörö')

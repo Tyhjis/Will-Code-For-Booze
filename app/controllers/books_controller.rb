@@ -70,13 +70,13 @@ class BooksController < ApplicationController
 
   # DELETE /books/1
   # DELETE /books/1.json
-  def destroy
-    @book.destroy
-    respond_to do |format|
-      format.html { redirect_to books_url }
-      format.json { head :no_content }
-    end
-  end
+  # def destroy
+  #   @book.destroy
+  #   respond_to do |format|
+  #     format.html { redirect_to books_url }
+  #     format.json { head :no_content }
+  #   end
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.

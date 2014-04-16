@@ -6,7 +6,6 @@ class InproceedingsController < ApplicationController
   #end
 
   def show
-    @bibtex = @inproceeding.to_bib_str
   end
 
   def new
