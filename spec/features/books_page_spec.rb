@@ -23,6 +23,29 @@ describe 'Books page' do
     end
   end
 
+  it 'correctly modifies an existing attribute' do
+    visit references_path
+    click_link 'New Book'
+    fill_in('book_key', with:'1234569992')
+    fill_in('book_author', with:'Erkki Hervanta')
+    fill_in('book_title', with:'Boozeman journal')
+    fill_in('book_publisher', with:'Helsinki')
+    fill_in('book_year', with:'1999')
+    click_button('Create Book')
+
+    click_link 'Edit'
+
+    expect(page).to have_content 'Editing book:'
+
+    fill_in('book_author', with:'Jaska Jokunen')
+    click_button 'Update Book'
+
+    expect(page).to have_content 'Book was successfully updated.'
+    expect(page).not_to have_content 'Erkki Hervanta'
+    expect(page).to have_content 'Jaska Jokunen'
+
+  end
+
   describe 'with wrong or empty parameters' do
     it 'should not be able to create book reference' do
       visit references_path
