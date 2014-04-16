@@ -56,7 +56,8 @@ class InproceedingsController < ApplicationController
 
   def inproceeding_params
     params.require(:inproceeding).permit(:author, :title, :booktitle, :year,:editor,
-    generatekey                                  :volume, :series, :pagestart, :pageend, :address, :month, :organization, :publisher, :note, :key)
+                                         :volume, :series, :pagestart, :pageend, :address, :month, :organization, :publisher, :note, :key)
+    generatekey
   end
 
 
