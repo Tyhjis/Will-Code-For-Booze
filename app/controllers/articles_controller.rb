@@ -36,8 +36,8 @@ class ArticlesController < ApplicationController
   end
 
   def generatekey
-    if @book.key.nil? or @book.key.empty?
-      @book.key = @book.keygen
+    if @article.key.nil? or @article.key.empty?
+      @article.key = @article.keygen
     end
   end
 
@@ -45,6 +45,7 @@ class ArticlesController < ApplicationController
   # PATCH/PUT /articles/1.json
     def update
       respond_to do |format|
+        generatekey
         if @article.update(article_params)
           format.html { redirect_to references_path, notice: 'Article was successfully updated.' }
           format.json { head :no_content }
@@ -74,6 +75,6 @@ class ArticlesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
       params.require(:article).permit(:author, :title, :journal, :year, :volume, :numbe, :pagestart, :pageend, :month, :note, :key)
-      generatekey
+      # generatekey
     end
 end

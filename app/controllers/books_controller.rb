@@ -57,6 +57,7 @@ class BooksController < ApplicationController
   # PATCH/PUT /books/1.json
   def update
     respond_to do |format|
+      generatekey
       if @book.update(book_params)
         format.html { redirect_to references_path, notice: 'Book was successfully updated.' }
         format.json { head :no_content }
@@ -86,6 +87,6 @@ class BooksController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def book_params
       params.require(:book).permit(:author, :title, :publisher, :editor, :year, :booktitle, :series, :address, :volume, :number, :pagestart, :pageend, :month, :note, :key)
-      generatekey
+      # generatekey
     end
 end
