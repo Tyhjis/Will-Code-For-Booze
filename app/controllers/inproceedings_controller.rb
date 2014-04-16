@@ -23,6 +23,7 @@ class InproceedingsController < ApplicationController
 
   def update
     respond_to do |format|
+      generatekey
       if @inproceeding.update(inproceeding_params)
         format.html { redirect_to references_path, notice: 'Inproceedings was successfully updated.' }
         format.json { head :no_content }
@@ -57,7 +58,7 @@ class InproceedingsController < ApplicationController
   def inproceeding_params
     params.require(:inproceeding).permit(:author, :title, :booktitle, :year,:editor,
                                          :volume, :series, :pagestart, :pageend, :address, :month, :organization, :publisher, :note, :key)
-    generatekey
+    # generatekey
   end
 
 
