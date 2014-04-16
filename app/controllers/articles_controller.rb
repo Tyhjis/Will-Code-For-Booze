@@ -25,15 +25,19 @@ class ArticlesController < ApplicationController
   # POST /articles.json
   def create
     @article = Article.new article_params
-    if @article.key.nil? or @article.key.empty?
-      @article.key = @article.keygen
-    end
+    generatekey
     @article.referencetype='Article'
 
     if @article.save
       redirect_to references_path, notice: "Article type reference created"
     else
       render :new
+    end
+  end
+
+  def generatekey
+    if @book.key.nil? or @book.key.empty?
+      @book.key = @book.keygen
     end
   end
 
@@ -70,5 +74,6 @@ class ArticlesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
       params.require(:article).permit(:author, :title, :journal, :year, :volume, :numbe, :pagestart, :pageend, :month, :note, :key)
+      generatekey
     end
 end

@@ -25,14 +25,18 @@ class BooksController < ApplicationController
   # POST /books.json
   def create
     @book = Book.new book_params
-    if @book.key.nil? or @book.key.empty?
-      @book.key = @book.keygen
-    end
+    generatekey
     @book.referencetype='Book'
     if @book.save
       redirect_to references_path, notice: "Book type reference created"
     else
       render :new
+    end
+  end
+
+  def generatekey
+    if @book.key.nil? or @book.key.empty?
+      @book.key = @book.keygen
     end
   end
 
@@ -81,6 +85,7 @@ class BooksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def book_params
-      params.require(:book).permit(:author, :title, :publisher, :year, :volume, :number, :pagestart, :pageend, :month, :note, :key)
+      params.require(:book).permit(:author, :title, :publisher, :editor, :year, :booktitle, :series, :address, :volume, :number, :pagestart, :pageend, :month, :note, :key)
+      generatekey
     end
 end

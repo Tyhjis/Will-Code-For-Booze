@@ -37,9 +37,7 @@ class InproceedingsController < ApplicationController
     @inproceeding = Inproceeding.new inproceeding_params
 
     @inproceeding.referencetype = 'Inproceedings'
-    if @inproceeding.key.nil? or @inproceeding.key.empty?
-      @inproceeding.key = @inproceeding.keygen
-    end
+    generatekey
     if @inproceeding.save
 
       redirect_to references_path, notice: "Inproceedings type reference created"
@@ -50,9 +48,15 @@ class InproceedingsController < ApplicationController
 
   end
 
+  def generatekey
+    if @inproceeding.key.nil? or @inproceeding.key.empty?
+      @inproceeding.key = @inproceeding.keygen
+    end
+  end
+
   def inproceeding_params
     params.require(:inproceeding).permit(:author, :title, :booktitle, :year,:editor,
-                                         :volume, :series, :pagestart, :pageend, :address, :month, :organization, :publisher, :note, :key)
+    generatekey                                  :volume, :series, :pagestart, :pageend, :address, :month, :organization, :publisher, :note, :key)
   end
 
 
