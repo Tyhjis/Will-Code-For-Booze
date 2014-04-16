@@ -11,7 +11,7 @@ class Reference < ActiveRecord::Base
       generated_key += author.to_s[0..2]
       generated_key += year.to_s
       generated_key += rand(0..99).to_s
-      unless Inproceeding.all.find_by(key: generated_key).nil?
+      if Reference.find_by(key:generated_key)
         generated_key = keygen()
       end
       generated_key
