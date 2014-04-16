@@ -56,6 +56,20 @@ describe 'References page' do
     expect(page).to have_content 'Listing references'
   end
 
+  it 'shows all specified fields' do
+
+    visit references_path
+    expect(page).to have_content 'Type'
+    expect(page).to have_content 'Key'
+    expect(page).to have_content 'Author'
+    expect(page).to have_content 'Title'
+    expect(page).to have_content 'Publisher'
+    expect(page).to have_content 'Journal'
+    expect(page).to have_content 'Booktitle'
+    expect(page).to have_content 'Pages'
+
+  end
+
 end
 
 def make_books
