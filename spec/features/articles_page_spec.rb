@@ -66,4 +66,104 @@ describe 'Article page' do
     expect(page).to have_content 'jokusen muistelma'
   end
 
+  it 'has working edit link after creating a new article' do
+    visit new_article_path
+    fill_in('article_author', with:'jaska jokunen')
+    fill_in('article_title', with: 'jokusen seikkailu')
+    fill_in('article_journal', with: 'jokunen ja synkkä metsä')
+    fill_in('article_year', with: '1997')
+    fill_in('article_key', with: 'asdasd123')
+    click_button('Create Article')
+
+    click_link('Edit')
+    expect(page).to have_content 'Editing article: asdasd123'
+  end
+
+  it 'saves the edited article' do
+    visit new_article_path
+    fill_in('article_author', with:'jaska jokunen')
+    fill_in('article_title', with: 'jokusen seikkailu')
+    fill_in('article_journal', with: 'jokunen ja synkkä metsä')
+    fill_in('article_year', with: '1997')
+    fill_in('article_key', with: 'asdasd123')
+    click_button('Create Article')
+
+    click_link('Edit')
+
+    fill_in('article_author', with:'jaska jokunen1')
+    fill_in('article_title', with: 'jokusen seikkailu1')
+    fill_in('article_journal', with: 'jokunen ja synkkä metsä1')
+    fill_in('article_year', with: '1998')
+    fill_in('article_key', with: 'asdasd1231')
+
+    click_button('Update Article')
+
+    expect(page).to have_content 'jaska jokunen1'
+  end
+
+  it 'has no original article left after editing' do
+    visit new_article_path
+    fill_in('article_author', with:'jaska jokunen')
+    fill_in('article_title', with: 'jokusen seikkailu')
+    fill_in('article_journal', with: 'jokunen ja synkkä metsä')
+    fill_in('article_year', with: '1997')
+    fill_in('article_key', with: 'asdasd123')
+    click_button('Create Article')
+
+    click_link('Edit')
+
+    fill_in('article_author', with:'aaaa')
+    fill_in('article_title', with: 'aaaaa')
+    fill_in('article_journal', with: 'jokunen ja synkkä metsä1')
+    fill_in('article_year', with: '1998')
+    fill_in('article_key', with: 'asdasd1231')
+
+    click_button('Update Article')
+
+    expect(page).not_to have_content 'jaska'
+  end
+
+  it 'does not update the article if it has empty required fields' do
+    visit new_article_path
+    fill_in('article_author', with:'jaska jokunen')
+    fill_in('article_title', with: 'jokusen seikkailu')
+    fill_in('article_journal', with: 'jokunen ja synkkä metsä')
+    fill_in('article_year', with: '1997')
+    fill_in('article_key', with: 'asdasd123')
+    click_button('Create Article')
+
+    click_link('Edit')
+
+    fill_in('article_author', with:'')
+    fill_in('article_title', with: 'jokusen seikkailu1')
+    fill_in('article_journal', with: 'jokunen ja synkkä metsä1')
+    fill_in('article_year', with: '1998')
+    fill_in('article_key', with: 'asdasd1231')
+
+    click_button('Update Article')
+
+    expect(page).to have_content 'Editing article'
+    expect(page).to have_content 'error'
+
+    fill_in('article_author', with:'jaskaaa')
+    fill_in('article_title', with: '')
+
+    expect(page).to have_content 'Editing article'
+    expect(page).to have_content 'error'
+
+    fill_in('article_title', with: 'jokusen seikkailu1')
+    fill_in('article_journal', with: '')
+
+    expect(page).to have_content 'Editing article'
+    expect(page).to have_content 'error'
+
+    fill_in('article_journal', with: 'jokunen ja synkkä metsä1')
+    fill_in('article_year', with: '1000')
+
+    expect(page).to have_content 'Editing article'
+    expect(page).to have_content 'error'
+  end
+
+
+
 end
