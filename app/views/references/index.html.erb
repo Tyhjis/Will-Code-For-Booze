@@ -6,31 +6,34 @@
 
 <table>
   <thead>
-    <tr>
-      <th>Type</th>
-      <th>Key</th>
-      <th>Author</th>
-      <th>Title</th>
-      <th>Publisher</th>
-      <th>Journal</th>
-      <th>Booktitle</th>
-      <th>Pages</th>
+    <tr style="border-bottom:solid 1px">
+      <th style="padding:5px">Type</th>
+      <th style="padding:5px">Key</th>
+      <th style="padding:5px">Author</th>
+      <th style="padding:5px">Title</th>
+      <th style="padding:5px">Publisher</th>
+      <th style="padding:5px">Journal</th>
+      <th style="padding:5px">Booktitle</th>
+      <th style="padding:5px">Pages</th>
+      <th style="padding:5px">Actions</th>
+      <th style="padding:5px"></th>
+      <th style="padding:5px"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @references.each do |reference| %>
-      <tr>
-        <td><%= reference.referencetype %></td>
-        <td><%= reference.key if reference.key %></td>
-        <td><%= reference.author if reference.author %></td>
-        <td><%= reference.title if reference.title %></td>
-        <td><%= reference.publisher if reference.publisher %></td>
-        <td><%= reference.journal if reference.journal %></td>
-        <td><%= reference.booktitle if reference.booktitle %></td>
-        <td><%= reference.pagestart if reference.pagestart %> - <%= reference.pageend if reference.pageend %></td>
-        <td><%= link_to 'Show', reference %></td>
-        <td>
+      <tr style="border-bottom:solid 1px">
+        <td style="padding:5px"><%= reference.referencetype %></td>
+        <td style="padding:5px"><%= reference.key if reference.key %></td>
+        <td style="padding:5px"><%= reference.author if reference.author %></td>
+        <td style="padding:5px"><%= reference.title if reference.title %></td>
+        <td style="padding:5px"><%= reference.publisher if reference.publisher %></td>
+        <td style="padding:5px"><%= reference.journal if reference.journal %></td>
+        <td style="padding:5px"><%= reference.booktitle if reference.booktitle %></td>
+        <td style="padding:5px"><%= reference.pagestart if reference.pagestart %> - <%= reference.pageend if reference.pageend %></td>
+        <td style="padding:5px"><%= link_to 'Show', reference %></td>
+        <td style="padding:5px">
           <% if reference.referencetype == 'Article' %>
             <%= link_to 'Edit', edit_article_path(reference) %>
           <% elsif reference.referencetype == 'Inproceedings' %>
@@ -39,7 +42,7 @@
              <%= link_to 'Edit', edit_book_path(reference) %>
           <% end %>
         </td>
-        <td><%= link_to 'Destroy', reference, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td style="padding:5px"><%= link_to 'Destroy', reference, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
