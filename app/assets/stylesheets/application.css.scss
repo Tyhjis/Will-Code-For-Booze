@@ -16,9 +16,9 @@
  */
 
 main{
-  -webkit-transition-property: color, background;
-  -webkit-transition-duration: 0.5s;
-  -webkit-transition-timing-function: linear, ease-in;
+  transition-property: color, background;
+  transition-duration: 0.5s;
+  transition-timing-function: linear, ease-in;
 }
 
 main:hover
@@ -28,9 +28,9 @@ main:hover
 }
 
 header{
-  -webkit-transition-property: color, background;
-  -webkit-transition-duration: 0.5s;
-  -webkit-transition-timing-function: linear, ease-in;
+  transition-property: color, background;
+  transition-duration: 0.5s;
+  transition-timing-function: linear, ease-in;
 }
 
 header:hover{
@@ -38,12 +38,16 @@ header:hover{
 }
 
 a{
-  -webkit-transition-property: color, background;
-  -webkit-transition-duration: 0.5s;
-  -webkit-transition-timing-function: linear, ease-in;
+  transition-property: color, background;
+  transition-duration: 0.5s;
+  transition-timing-function: linear, ease-in;
 }
 
 a:hover{
   color:blueviolet;
   background:yellow;
+}
+
+body {
+  background-color: #eeeeee;
 }
